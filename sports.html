@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中原生存指南 - 體育運動</title>
+    <style>
+        body { font-family: "Microsoft JhengHei", sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f9f9f9; }
+        header { background-color: #A6192E; color: white; padding: 30px; text-align: center; }
+        nav { background-color: #333; display: flex; justify-content: center; flex-wrap: wrap; padding: 10px; position: sticky; top: 0; z-index: 1000; }
+        nav a { color: white; padding: 10px 15px; text-decoration: none; font-size: 14px; }
+        nav a:hover { background-color: #A6192E; border-radius: 5px; }
+        main { max-width: 850px; margin: 20px auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        
+        .sport-grid { display: flex; flex-direction: column; gap: 20px; margin-top: 20px; }
+        .sport-card { border: 1px solid #ddd; border-radius: 10px; overflow: hidden; transition: 0.3s; background: #fff; display: flex; align-items: center; }
+        .sport-card:hover { transform: scale(1.01); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .sport-card img { width: 300px; height: 200px; object-fit: cover; }
+        .card-content { padding: 25px; flex: 1; }
+        .card-content h3 { margin-top: 0; color: #A6192E; font-size: 1.5em; }
+        
+        .btn-group { text-align: center; margin-top: 40px; padding: 20px; border-top: 2px solid #eee; }
+        .action-btn { 
+            display: block; 
+            background: #A6192E; 
+            color: white; 
+            padding: 15px 20px; 
+            border-radius: 8px; 
+            text-decoration: none; 
+            margin: 15px auto; 
+            font-weight: bold; 
+            max-width: 400px;
+            font-size: 16px;
+        }
+        .action-btn:hover { background: #333; }
+        
+        footer { text-align: center; padding: 20px; color: #888; font-size: 12px; }
+
+        @media (max-width: 700px) {
+            .sport-card { flex-direction: column; }
+            .sport-card img { width: 100%; height: auto; }
+        }
+                /* 回到頂部按鈕樣式 */
+        #backToTop {
+            display: none; /* 預設隱藏，滾動後顯示 */
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+            background-color: #A6192E; /* 中原紅 */
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            font-size: 18px;
+            transition: 0.3s;
+            width: 50px;
+            height: 50px;
+        }
+
+        #backToTop:hover {
+            background-color: #333;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>🏀 體育與全人健康</h1>
+    <p>校園場館位置與運動資源整理</p>
+</header>
+
+<nav>
+    <a href="index.html">🏠 首頁</a> <a href="food.html">🍱 美食</a> <a href="study.html">📖 學習</a> 
+    <a href="policy.html">💰 獎勵</a> <a href="admin.html">🏢 行政</a> <a href="sports.html">🏀 運動</a> 
+    <a href="club.html">🎸 社團</a> <a href="transport.html">🚌 交通</a> <a href="college.html">🏛️ 院系</a>
+    <a href="footer.html">📝 心得</a>
+</nav>
+
+<main>
+    <h2>強健體魄：校園運動地圖</h2>
+    <p>中原大學擁有非常完善的體育場館，是全人教育中不可或缺的一環。</p>
+
+    <div class="sport-grid">
+        <div class="sport-card">
+            <img src="image/體育室.jpg" alt="中原大學體育館">
+            <div class="card-content">
+                <h3>中原大學體育館</h3>
+                <p>校內最大的運動核心，包含室內籃球場、羽球場與排球場，也是各項大型賽事與集會的主要場地。</p>
+            </div>
+        </div>
+
+        <div class="sport-card">
+            <img src="image/游泳池.png" alt="中原大學游泳池">
+            <div class="card-content">
+                <h3>中原大學游泳池</h3>
+                <p>擁有奧運標準規格的室內溫水泳池，提供學生游泳教學、校隊訓練以及教職員工休閒運動使用。</p>
+            </div>
+        </div>
+
+        <div class="sport-card">
+            <img src="image/健身房.jpg" alt="中原大學健身房">
+            <div class="card-content">
+                <h3>中原大學健身房</h3>
+                <p>正式名稱為體適能中心。擁有職業級的重量訓練器材與多樣化的有氧設施，是學生鍛鍊體態的最佳去處。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="btn-group">
+        <h3 style="color: #A6192E;">📍 官方連結與地圖位置</h3>
+        <a href="https://share.google/NyD9BdqFGf0AHtcEb" target="_blank" class="action-btn">🗺️ 中原大學體育館：Google 地圖位置</a>
+        <a href="https://pe.cycu.edu.tw/" target="_blank" class="action-btn">🏠 中原大學體育室：官方網站</a>
+        <a href="https://www.cycu.edu.tw/?p=17449" target="_blank" class="action-btn">📖 中原大學健身房：詳細設施介紹</a>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2026 CYCU Survival Guide | 11244210 楊紫筠</p>
+</footer>
+<button onclick="topFunction()" id="backToTop" title="回到頂部">↑</button>
+
+<script>
+    // 取得按鈕
+    var mybutton = document.getElementById("backToTop");
+
+    // 當使用者滾動超過 300px 時顯示按鈕
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // 點擊按鈕後平滑捲動到頂部
+    function topFunction() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+</script>
+</body>
+</html>

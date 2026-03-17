@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中原生存指南 - 製作心得</title>
+    <style>
+        body { font-family: "Microsoft JhengHei", sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f9f9f9; }
+        header { background-color: #A6192E; color: white; padding: 30px; text-align: center; }
+        nav { background-color: #333; display: flex; justify-content: center; flex-wrap: wrap; padding: 10px; position: sticky; top: 0; z-index: 1000; }
+        nav a { color: white; padding: 10px 15px; text-decoration: none; font-size: 14px; }
+        nav a:hover { background-color: #A6192E; border-radius: 5px; }
+        
+        main { max-width: 800px; margin: 20px auto; padding: 40px; background: white; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        
+        .thought-section { margin-bottom: 40px; }
+        .thought-section h3 { color: #A6192E; border-bottom: 2px solid #A6192E; padding-bottom: 10px; margin-bottom: 20px; }
+        
+        .skill-tags { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0; }
+        .tag { background: #eee; padding: 5px 15px; border-radius: 20px; font-size: 14px; color: #555; border: 1px solid #ddd; }
+        
+        .ai-experience { 
+            background: #fdf2f2; border: 1px solid #ffcfcf; padding: 20px; border-radius: 10px; 
+            margin: 20px 0; border-left: 5px solid #A6192E; 
+        }
+
+        /* 留言區樣式 */
+        .contact-box { background: #fff; border: 2px dashed #A6192E; padding: 30px; border-radius: 15px; margin-top: 20px; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+        .form-group input, .form-group textarea { 
+            width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px; box-sizing: border-box; 
+        }
+        .send-btn { 
+            background: #A6192E; color: white; border: none; padding: 12px 30px; border-radius: 25px; 
+            cursor: pointer; font-size: 16px; font-weight: bold; transition: 0.3s; width: 100%; 
+        }
+        .send-btn:hover { background: #333; }
+        .hidden { display: none !important; }
+
+        .final-message { 
+            background: #A6192E; color: white; padding: 30px; border-radius: 15px; 
+            text-align: center; margin-top: 50px; box-shadow: 0 4px 15px rgba(166, 25, 46, 0.3); 
+        }
+        
+        .author-info { text-align: right; margin-top: 30px; color: #888; font-style: italic; }
+        footer { text-align: center; padding: 20px; color: #888; font-size: 12px; }
+            /* 回到頂部按鈕樣式 */
+        #backToTop {
+            display: none; /* 預設隱藏，滾動後顯示 */
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+            background-color: #A6192E; /* 中原紅 */
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            font-size: 18px;
+            transition: 0.3s;
+            width: 50px;
+            height: 50px;
+        }
+
+        #backToTop:hover {
+            background-color: #333;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>📝 製作心得與謝誌</h1>
+    <p>專案背後的初衷與 AI 協作經驗</p>
+</header>
+
+<nav>
+    <a href="index.html">🏠 首頁</a> <a href="food.html">🍱 美食</a> <a href="study.html">📖 學習</a> 
+    <a href="policy.html">💰 獎勵</a> <a href="admin.html">🏢 行政</a> <a href="sports.html">🏀 運動</a> 
+    <a href="club.html">🎸 社團</a> <a href="transport.html">🚌 交通</a> <a href="college.html">🏛️ 院系</a> 
+    <a href="footer.html">📝 心得</a>
+</nav>
+
+<main>
+    <div class="thought-section">
+        <h3>🌟 製作初衷</h3>
+        <p>
+            回想起剛進入中原大學時，對於廣大的校園、錯綜複雜的公車路線以及各個系辦的位置感到非常困惑。
+            身為資管系的學姊，我希望透過這次的網頁設計作業，建立一個直觀、好用的「生存指南」，讓學弟妹們能快速找到需要的資訊，不再迷路。
+        </p>
+    </div>
+
+    <div class="thought-section">
+        <h3>🛠️ 技術成長與 AI 協作</h3>
+        <p>在製作這十個頁面的過程中，我挑戰了許多以前沒嘗試過的網頁技術：</p>
+        <div class="skill-tags">
+            <span class="tag">RWD 響應式排版</span>
+            <span class="tag">CSS Flexbox 佈局</span>
+            <span class="tag">JavaScript 即時搜尋過濾</span>
+            <span class="tag">AI 提示工程 (Prompt Engineering)</span>
+            <span class="tag">使用者體驗設計 (UX)</span>
+        </div>
+        
+        <div class="ai-experience">
+            <strong>🤖 特別感謝：AI 夥伴 Gemini 的協助</strong>
+            <p>
+                這次專案中最特別的體驗，是全程與 AI 進行協作。透過不斷精煉與 AI 的對話（Prompting），
+                我能夠更快速地生成複雜的 CSS 佈局、除錯 JavaScript 程式碼，並將散亂的校園數據整理成好用的查詢系統。
+                這讓我學會了如何將「人腦的創意」與「AI 的效率」結合，發揮資管人解決問題的最高價值。
+            </p>
+        </div>
+    </div>
+
+    <div class="thought-section">
+        <h3>💡 學習感悟</h3>
+        <p>
+            這不只是一份網頁作業，更是一次重新認識校園的過程。從整理中原夜市美食、研究證照獎勵辦法，到精確標註每一個系辦的房號，
+            我學會了如何從海量的資訊中篩選出對使用者最有價值的部分。
+        </p>
+    </div>
+
+    <div class="thought-section">
+        <h3>📫 有話想對學姊說？</h3>
+        <div class="contact-box">
+            <form id="contactForm">
+                <div class="form-group">
+                    <label>妳的系級：</label>
+                    <input type="text" id="userName" placeholder="例如：資管一甲">
+                </div>
+                <div class="form-group">
+                    <label>想說的話：</label>
+                    <textarea id="userMsg" rows="4" placeholder="在這裡輸入妳的問題或悄悄話..."></textarea>
+                </div>
+                <button type="button" class="send-btn" onclick="sendMessage()">送出留言</button>
+            </form>
+            <div id="successMsg" class="hidden" style="text-align: center; color: #28a745; margin-top: 15px; font-weight: bold;">
+                ✨ 留言發送成功！學姊會盡快回覆妳唷！
+            </div>
+        </div>
+    </div>
+
+    <div class="final-message">
+        <h2>在中原，活出妳的精彩！</h2>
+        <p>希望這份指南能成為妳大學生活中的小小亮光。<br>加油，學弟妹們！我們在校園見！</p>
+    </div>
+
+    <div class="author-info">
+        <p>中原大學 資訊管理學系 三年乙班</p>
+        <p>11244210 楊紫筠 筆</p>
+        <p>製作日期：2026 年 3 月</p>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2026 CYCU Survival Guide | All Rights Reserved.</p>
+</footer>
+
+<script>
+    function sendMessage() {
+        const name = document.getElementById('userName').value;
+        const msg = document.getElementById('userMsg').value;
+        const successBox = document.getElementById('successMsg');
+        const form = document.getElementById('contactForm');
+
+        if (name.trim() === "" || msg.trim() === "") {
+            alert("請填寫系級與留言內容唷！");
+            return;
+        }
+
+        // 模擬發送互動
+        alert("學姊已收到來自「" + name + "」的訊息！\n這是一個網頁功能演示，實際留言不會儲存到伺服器。");
+        
+        successBox.classList.remove('hidden');
+        form.style.opacity = "0.3";
+        form.style.pointerEvents = "none";
+
+        // 3秒後恢復初始狀態供再次測試
+        setTimeout(() => {
+            successBox.classList.add('hidden');
+            form.style.opacity = "1";
+            form.style.pointerEvents = "auto";
+            form.reset();
+        }, 3000);
+    }
+</script>
+<button onclick="topFunction()" id="backToTop" title="回到頂部">↑</button>
+
+<script>
+    // 取得按鈕
+    var mybutton = document.getElementById("backToTop");
+
+    // 當使用者滾動超過 300px 時顯示按鈕
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // 點擊按鈕後平滑捲動到頂部
+    function topFunction() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+</script>
+</body>
+</html>
